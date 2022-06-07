@@ -1,0 +1,7 @@
+# Lantern
+
+## Components
+
+- Arduino Nano (clone) - ([aliexpress](https://www.aliexpress.com/item/32341832857.html)) ([arduino.cc](https://store-usa.arduino.cc/products/arduino-nano)) ([jaycar.com.au](https://www.jaycar.com.au/duinotech-nano-board-arduino-compatible/p/XC4414))
+- LED Strip WS2812B (60LEDs/m * 5m) - ([aliexpress](https://www.aliexpress.com/item/32682015405.html)) ([jaycar.com.au](https://www.jaycar.com.au/2m-rgb-led-strip-with-120-x-addressable-w2812b-rgb-leds-arduino-mcu-compatible-5v/p/XC4390))
+- Battery pack - 4x AA ([aliexpress](https://www.aliexpress.com/item/1005002277845095.html)) ([jaycar.com.au](https://www.jaycar.com.au/4-x-aa-square-battery-holder/p/PH9200))
