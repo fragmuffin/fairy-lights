@@ -1,0 +1,244 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:Arduino_Nano_Every A?
+U 1 1 62D39AA4
+P 5600 3350
+F 0 "A?" H 5750 2400 50  0000 C CNN
+F 1 "Arduino_Nano_Every" H 6050 2300 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 5600 3350 50  0001 C CIN
+F 3 "https://content.arduino.cc/assets/NANOEveryV3.0_sch.pdf" H 5600 3350 50  0001 C CNN
+	1    5600 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D?
+U 1 1 62D3A76B
+P 7150 3250
+F 0 "D?" H 7200 3650 50  0000 L CNN
+F 1 "WS2812B" H 7200 3550 50  0000 L CNN
+F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 7200 2950 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 7250 2875 50  0001 L TNN
+	1    7150 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D?
+U 1 1 62D3ACD3
+P 7800 3250
+F 0 "D?" H 7850 3650 50  0000 L CNN
+F 1 "WS2812B" H 7850 3550 50  0000 L CNN
+F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 7850 2950 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 7900 2875 50  0001 L TNN
+	1    7800 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 3250 7500 3250
+$Comp
+L power:GND #PWR?
+U 1 1 62D3BBFD
+P 7050 4700
+F 0 "#PWR?" H 7050 4450 50  0001 C CNN
+F 1 "GND" H 7055 4527 50  0000 C CNN
+F 2 "" H 7050 4700 50  0001 C CNN
+F 3 "" H 7050 4700 50  0001 C CNN
+	1    7050 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 3350 4500 2150
+Wire Wire Line
+	4500 2150 6450 2150
+Wire Wire Line
+	6450 2150 6450 3250
+Wire Wire Line
+	6450 3250 6850 3250
+Wire Wire Line
+	7050 2750 7150 2750
+Wire Wire Line
+	7800 2750 7800 2950
+Wire Wire Line
+	7150 2750 7150 2950
+Connection ~ 7150 2750
+Wire Wire Line
+	7150 2750 7800 2750
+Wire Wire Line
+	7050 4700 7050 4600
+Wire Wire Line
+	7050 3650 7150 3650
+Wire Wire Line
+	7800 3650 7800 3550
+Wire Wire Line
+	7150 3650 7150 3550
+Connection ~ 7150 3650
+Wire Wire Line
+	7150 3650 7800 3650
+$Comp
+L Device:R_POT_TRIM RV?
+U 1 1 62D3F4F8
+P 6600 4250
+F 0 "RV?" H 6530 4204 50  0000 R CNN
+F 1 "R_POT_TRIM" H 6530 4295 50  0000 R CNN
+F 2 "" H 6600 4250 50  0001 C CNN
+F 3 "~" H 6600 4250 50  0001 C CNN
+	1    6600 4250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6600 4400 6600 4600
+Wire Wire Line
+	6600 4600 7050 4600
+Connection ~ 7050 4600
+Wire Wire Line
+	7050 4600 7050 3650
+Wire Wire Line
+	6300 3550 6300 4250
+Wire Wire Line
+	6300 4250 6450 4250
+Wire Wire Line
+	6600 4100 6600 2250
+Wire Wire Line
+	6600 2250 5800 2250
+Wire Wire Line
+	5800 2250 5800 2350
+Wire Wire Line
+	6300 3550 6100 3550
+Wire Wire Line
+	4500 3350 5100 3350
+$Comp
+L Switch:SW_Push SW?
+U 1 1 62D42562
+P 4750 2850
+F 0 "SW?" V 4796 2802 50  0000 R CNN
+F 1 "SW_Push" V 4705 2802 50  0000 R CNN
+F 2 "" H 4750 3050 50  0001 C CNN
+F 3 "~" H 4750 3050 50  0001 C CNN
+	1    4750 2850
+	0    -1   -1   0   
+$EndComp
+Connection ~ 6450 4250
+Wire Wire Line
+	6450 4250 6750 4250
+Wire Wire Line
+	6600 4600 5600 4600
+Wire Wire Line
+	5600 4600 5600 4350
+Connection ~ 6600 4600
+Wire Wire Line
+	5600 4600 4750 4600
+Connection ~ 5600 4600
+Wire Wire Line
+	4750 3250 5100 3250
+$Comp
+L Device:R R?
+U 1 1 62D48FBF
+P 4750 3700
+F 0 "R?" H 4820 3746 50  0000 L CNN
+F 1 "R" H 4820 3655 50  0000 L CNN
+F 2 "" V 4680 3700 50  0001 C CNN
+F 3 "~" H 4750 3700 50  0001 C CNN
+	1    4750 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 3250 4750 3550
+Wire Wire Line
+	5500 2100 5500 2350
+Text Notes 8150 3250 0    50   ~ 0
+... WS2812b x 150
+Wire Wire Line
+	4750 3050 4750 3250
+Connection ~ 4750 3250
+$Comp
+L Device:Battery BT?
+U 1 1 62D501ED
+P 9250 3150
+F 0 "BT?" H 9358 3196 50  0000 L CNN
+F 1 "Battery" H 9358 3105 50  0000 L CNN
+F 2 "" V 9250 3210 50  0001 C CNN
+F 3 "~" V 9250 3210 50  0001 C CNN
+	1    9250 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Battery BT?
+U 1 1 62D50C2E
+P 9800 3150
+F 0 "BT?" H 9908 3196 50  0000 L CNN
+F 1 "Battery" H 9908 3105 50  0000 L CNN
+F 2 "" V 9800 3210 50  0001 C CNN
+F 3 "~" V 9800 3210 50  0001 C CNN
+	1    9800 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9250 2100 9250 2950
+Wire Wire Line
+	7050 2150 9800 2150
+Wire Wire Line
+	9800 2150 9800 2950
+Wire Wire Line
+	7050 2150 7050 2750
+Wire Wire Line
+	9250 3350 9250 4600
+Wire Wire Line
+	9250 4600 7050 4600
+Wire Wire Line
+	9800 3350 9800 4600
+Wire Wire Line
+	9800 4600 9250 4600
+Connection ~ 9250 4600
+$Comp
+L power:+9V #PWR?
+U 1 1 62D54247
+P 9250 2000
+F 0 "#PWR?" H 9250 1850 50  0001 C CNN
+F 1 "+9V" H 9265 2173 50  0000 C CNN
+F 2 "" H 9250 2000 50  0001 C CNN
+F 3 "" H 9250 2000 50  0001 C CNN
+	1    9250 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 62D54747
+P 9800 2000
+F 0 "#PWR?" H 9800 1850 50  0001 C CNN
+F 1 "+5V" H 9815 2173 50  0000 C CNN
+F 2 "" H 9800 2000 50  0001 C CNN
+F 3 "" H 9800 2000 50  0001 C CNN
+	1    9800 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9800 2000 9800 2150
+Connection ~ 9800 2150
+Wire Wire Line
+	9250 2000 9250 2100
+Connection ~ 9250 2100
+Wire Wire Line
+	5500 2100 9250 2100
+Wire Wire Line
+	4750 3850 4750 4600
+Wire Wire Line
+	4750 2650 4750 2250
+NoConn ~ 5700 2350
+Wire Wire Line
+	5700 2350 5700 2250
+Wire Wire Line
+	5700 2250 4750 2250
+$EndSCHEMATC
