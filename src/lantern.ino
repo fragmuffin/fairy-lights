@@ -14,6 +14,7 @@
 #define ANALOG_PIN A2
 
 #define DEFAULT_BRIGHTNESS 0x40
+#define MIN_BRIGHTNESS 0x05
 
 typedef struct {
     CRGB *leds;
@@ -107,6 +108,9 @@ void loop() {
     // Read Dial
     #ifdef ANALOG_PIN
     l_brightness = (uint8_t)((analogRead(ANALOG_PIN) >> 2) & 0xff);
+    if (l_brightness < MIN_BRIGHTNESS) {
+        l_brightness = MIN_BRIGHTNESS;
+    }
     #endif
 
     // Check switch
