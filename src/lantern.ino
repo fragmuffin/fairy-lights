@@ -33,7 +33,6 @@ CRGBString myLeds = {g_leds, NUM_LEDS};
 
 typedef enum {
     MODE_SPARKLE = 0,
-    MODE_SPARKLE_MONO,
     MODE_RAINBOW,
     MODE__COUNT,
 } mode_t;
@@ -67,15 +66,6 @@ void setRunner(CRGBString *leds, int dir, int count, CRGB color) {
         leds->leds[idx] = color;
     }
     i = (i + dir) % leds->length;
-}
-
-void setSparkleMonochrome(CRGBString *leds, uint8_t level) {
-    int idx = random(leds->length);
-    // Random Shade of white
-    uint8_t l_c = random(level);
-    leds->leds[idx].r = l_c;
-    leds->leds[idx].g = l_c;
-    leds->leds[idx].b = l_c;
 }
 
 void setSparkle(CRGBString *leds, uint8_t level) {
@@ -126,10 +116,6 @@ void loop() {
 
     // State Machine
     switch (g_mode) {
-        case MODE_SPARKLE_MONO:  // monochrome sparkle
-            fadeAll(&myLeds, l_brightness >> 2);
-            setSparkleMonochrome(&myLeds, l_brightness);
-            break;
         case MODE_RAINBOW:
             setRainbow(&myLeds, (uint8_t)(((millis() << 8) / 10000) & 0xff));
             fadeAll(&myLeds, 0xff - l_brightness);
