@@ -31,12 +31,14 @@ typedef struct {
 CRGB g_leds[NUM_LEDS];
 CRGBString myLeds = {g_leds, NUM_LEDS};
 
-#define MODE_SPARKLE 0
-#define MODE_SPARKLE_MONO 1
-#define MODE_RAINBOW 2
-#define MODE__COUNT 3
+typedef enum {
+    MODE_SPARKLE = 0,
+    MODE_SPARKLE_MONO,
+    MODE_RAINBOW,
+    MODE__COUNT,
+} mode_t;
 
-uint8_t g_mode = MODE_SPARKLE;
+mode_t g_mode = MODE_SPARKLE;
 
 void setup() {
     // Initialize the digital pins
@@ -117,7 +119,7 @@ void loop() {
     #ifdef BUTTON_PIN
     l_buttonState = digitalRead(BUTTON_PIN);
     if (l_buttonState && !l_lastButtonState) { // rising edge
-        g_mode = (g_mode + 1) % MODE__COUNT;  // increment state (cycle)
+        g_mode = (mode_t)((g_mode + 1) % MODE__COUNT);  // increment state (cycle)
     }
     l_lastButtonState = l_buttonState;
     #endif
